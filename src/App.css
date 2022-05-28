@@ -26,7 +26,6 @@ h1 {
     display: inline-block;
     margin: 0 2rem;
     font-family: sans-serif;
-    order: solid blue;
     padding: 1rem 3rem;
     transition: .5s;
 }
@@ -52,4 +51,16 @@ h1 {
 
 #mainMessage {
     margin-top: 2rem;
+}
+
+#shopContent {
+    margin: 2rem auto auto auto;
+    text-align: center;
+    border: solid black;
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    justify-content: center;
+    background-color: blanchedalmond;
 }

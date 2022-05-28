@@ -1,0 +1,33 @@
+.itemWrapper {
+    margin: 1rem;
+    border: solid black;
+    padding: .5rem;
+    background-color: white;
+}
+
+.itemTitle {
+    font-size: larger;
+}
+
+.itemPicture {
+    max-width: 100px;
+    border: solid black;
+}
+
+.numberInput {
+    width: 2rem;
+}
+
+.addToCartButton {
+    display: inline-block;
+    padding: 3px;
+    margin-left: 2px;
+    border: 1px solid black;
+    border-radius: 12px;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.addToCartButton:hover {
+    box-shadow: 2px 2px 7px black;
+}
