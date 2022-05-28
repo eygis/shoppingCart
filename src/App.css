@@ -1,8 +1,55 @@
 * {
     margin: 0;
     padding: 0;
-  }
+}
 
-  h3 {
+a:visited {
+    color: inherit
+}
+
+h1 {
       color: purple;
-  }
+      margin: .5rem auto auto 1rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.banner {
+    display: flex;
+    box-shadow: 0 3px 5px black;
+}
+
+.linksDiv {
+    order: solid red;
+}
+
+.link {
+    display: inline-block;
+    margin: 0 2rem;
+    font-family: sans-serif;
+    order: solid blue;
+    padding: 1rem 3rem;
+    transition: .5s;
+}
+
+.link:hover {
+    background-color: lightgrey;
+}
+
+#homeContent {
+    text-align: center;
+}
+
+#homeMain {
+    border: solid grey;
+    margin: 1.5rem auto;
+    width: 40%;
+    padding: 1.5rem;
+}
+
+#greeting {
+    font-size: xx-large;
+}
+
+#mainMessage {
+    margin-top: 2rem;
+}
