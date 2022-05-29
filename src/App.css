@@ -3,8 +3,12 @@
     padding: 0;
 }
 
+a {
+    color: inherit;
+}
+
 a:visited {
-    color: inherit
+    color: inherit;
 }
 
 h1 {
@@ -63,4 +67,31 @@ h1 {
     padding: 1.5rem;
     justify-content: center;
     background-color: blanchedalmond;
+}
+
+#noCart {
+    border: solid black;
+    text-align: center;
+    width: 60%;
+    margin: 4rem auto;
+    padding: 1rem;
+    font-size: xx-large;
+}
+
+#checkout {
+    display: flex;
+    margin: 2rem;
+}
+
+#checkoutButton {
+    background-color: orange;
+    padding: .5rem;
+    border: outset grey;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    cursor: pointer;
+}
+
+.black {
+    color: black;
 }

@@ -1,0 +1,47 @@
+#guideWrapper {
+    display: flex;
+    margin: 2rem;
+}
+
+#guideName {
+    text-align: center;
+    width: 50%;
+    font-size: x-large;
+    border-bottom: solid purple;
+}
+
+#guideQuantity {
+    text-align: center;
+    width: 25%;
+    border-bottom: solid red;
+}
+
+#guidePrice {
+    text-align: center;
+    width: 25%;
+    border-bottom: solid green;
+}
+
+.cartItemWrapper {
+    display: flex;
+    border: solid black;
+    margin: 2rem;
+}
+
+.cartItemName {
+    border-right: solid black;
+    text-align: center;
+    width: 50%;
+    font-size: x-large;
+}
+
+.cartItemQuantity {
+    border-right: solid black;
+    text-align: center;
+    width: 25%;
+}
+
+.cartItemPrice {
+    text-align: center;
+    width: 25%;
+}

@@ -13,12 +13,12 @@ class Shop extends React.Component {
                     <div className='linksDiv'>
                     <Link to='/'><div className="link">Home</div></Link>
                     <Link to='/shop'><div className="link">Shop</div></Link>
-                        <div className="link">Cart{this.props.currentTotal && `(${this.props.currentTotal})`}</div>
+                    <Link to='/cart'><div className="link">Cart{this.props.currentTotal && `(${this.props.currentTotal})`}</div></Link>
                     </div>
                 </div>
                 <div id='shopContent'>
                     {colorList.map(color => {
-                        return <Item name={color.name} source={color.source} price={color.price} key={color.name} state={this.props.state} updateState={this.props.updateState} />
+                        return <Item name={color.name} source={color.source} price={color.price} key={color.name} updateState={this.props.updateState} />
                     })}
                 </div>
             </div>

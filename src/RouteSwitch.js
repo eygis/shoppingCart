@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App';
-import Shop from "./Shop";
+import Shop from './Shop';
+import Cart from './Cart'
 
 class RouteSwitch extends React.Component {
     constructor(props) {
@@ -32,7 +33,8 @@ class RouteSwitch extends React.Component {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<App currentTotal={this.state.total} />} />
-                    <Route path='/shop' element={<Shop state={this.state} updateState={this.updateState} currentTotal={this.state.total} />} />
+                    <Route path='/shop' element={<Shop updateState={this.updateState} currentTotal={this.state.total} />} />
+                    <Route path='/cart' element={<Cart currentTotal={this.state.total} state={this.state} />} />
                 </Routes>
             </BrowserRouter>
         )
