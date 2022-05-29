@@ -29,7 +29,7 @@ class Cart extends React.Component {
                         <div className='linksDiv'>
                         <Link to='/'><div className="link">Home</div></Link>
                         <Link to='/shop'><div className="link">Shop</div></Link>
-                        <Link to='/cart'><div className="link">Cart{this.props.currentTotal && `(${this.props.currentTotal})`}</div></Link>
+                        <Link to='/cart'><div className="link">Cart{(this.props.currentTotal > 0) && `(${this.props.currentTotal})`}</div></Link>
                         </div>
                     </div>
                     <div id='cartContent'>
@@ -59,7 +59,7 @@ class Cart extends React.Component {
                         </div>
                         {Object.entries(this.props.state).map(pair => {
                             if (pair[0]=='total') return 
-                            return <CartItem name={pair[0]} quantity={pair[1]} key={pair[0]} /> 
+                            return <CartItem name={pair[0]} quantity={pair[1]} key={pair[0]} state={this.props.state} childSetState={this.props.childSetState} /> 
                         })}
                     </div>
                     <div id='checkout'>

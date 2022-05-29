@@ -7,6 +7,7 @@ class CartItem extends React.Component {
         super(props);
 
         this.itemPricer = this.itemPricer.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
     }
 
     itemPricer = (color, quantity) => {
@@ -17,13 +18,20 @@ class CartItem extends React.Component {
         }
     }
 
+    deleteItem = () => {
+        let stateCopy = this.props.state;
+        delete stateCopy[this.props.name];
+        this.props.childSetState(stateCopy);
+    }
+
     render() {
 
         return(
             <div className='cartItemWrapper'>
                 <div className='cartItemName'>{this.props.name}</div>
                 <div className='cartItemQuantity'>{this.props.quantity}</div>
-                <div className='cartItemPrice'>${this.itemPricer(this.props.name, this.props.quantity)}</div>
+                <div className='cartItemPrice'>${this.itemPricer(this.props.name, this.props.quantity).toFixed(2)}</div>
+                <div className='delete' onClick={this.deleteItem}>X</div>
             </div>
         )
     }

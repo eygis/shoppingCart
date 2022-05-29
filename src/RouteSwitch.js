@@ -13,6 +13,7 @@ class RouteSwitch extends React.Component {
         }
 
         this.updateState = this.updateState.bind(this);
+        this.childSetState = this.childSetState.bind(this);
     }
 
     cartTotal = () => {
@@ -28,13 +29,18 @@ class RouteSwitch extends React.Component {
         this.state[item] ? this.setState({[item]: (this.state[item] + parseInt(number))}, this.cartTotal) : this.setState({[item]: parseInt(number)}, this.cartTotal);
     }
 
+    childSetState = (newState) => {
+        this.setState(newState);
+        this.cartTotal();
+    }
+
     render() {
         return (
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<App currentTotal={this.state.total} />} />
                     <Route path='/shop' element={<Shop updateState={this.updateState} currentTotal={this.state.total} />} />
-                    <Route path='/cart' element={<Cart currentTotal={this.state.total} state={this.state} />} />
+                    <Route path='/cart' element={<Cart currentTotal={this.state.total} state={this.state} childSetState={this.childSetState}/>} />
                 </Routes>
             </BrowserRouter>
         )

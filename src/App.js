@@ -13,7 +13,7 @@ class App extends React.Component {
                     <div className='linksDiv'>
                     <Link to='/'><div className="link">Home</div></Link>
                     <Link to='/shop'><div className="link">Shop</div></Link>
-                    <Link to='/cart'><div className="link">Cart{this.props.currentTotal && `(${this.props.currentTotal})`}</div></Link>
+                    <Link to='/cart'><div className="link">Cart{(this.props.currentTotal > 0) && `(${this.props.currentTotal})`}</div></Link>
                     </div>
                 </div>
                 <div id='homeContent'>
