@@ -90,6 +90,11 @@ h1 {
     font-size: xx-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     cursor: pointer;
+    transition: .05s;
+}
+
+#checkoutButton:hover {
+    transform: scale(1.05)
 }
 
 .black {
