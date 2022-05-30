@@ -1,3 +1,3 @@
-Live site: colorshoppingcart.netlify.app
+Live site: https://colorshoppingcart.netlify.app
 
-Shopping cart app built in React; Meant to soon replace my previous eShop project.
+Shopping cart app built in React with React Router; Created to replace my previous eShop project.
